@@ -12,26 +12,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   
   <script type="text/javascript" language="javascript"> 
-$('#action-button').click(function() {
-   $.ajax({
-      url: 'https://api.morph.io/rjtedge/sold_prices/data.json?key=pZlXoFAWn6C0hgkdEW4j&query=select%20*%20from%20%27data%27%20limit%2010',
-      data: {
-         format: 'json'
-      },
-      error: function() {
-         $('#info').html('<p>An error has occurred</p>');
-      },
-      dataType: 'jsonp',
-      success: function(data) {
-         var $title = $('<h1>').text(data.address[0]);
-         $('#info')
-            .append($title);
-      },
-      type: 'GET'
+  
+   $(document).ready(function() {
+      $("button").click(function(event){
+          $.getJSON("https://api.morph.io/rjtedge/sold_prices/data.json?key=pZlXoFAWn6C0hgkdEW4j&query=select%20*%20from%20%27data%27%20limit%2010", function(jd) {
+             $("#info").html('<p> Address: ' + jd.[0].address + '</p>');
+          });
+      });
    });
-});
-</script>
-
+   </script>
 
 {% seo %}
   </head>
