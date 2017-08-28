@@ -1,9 +1,4 @@
 
 
-
-
-
-
-
-<button id="action-button">Click me to load info!</button>
+<button id="action-button">Click me!</button>
 <div id="info"></div>
