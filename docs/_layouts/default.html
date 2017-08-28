@@ -15,11 +15,12 @@
     $(document).ready(function() {
       $("#button").click(function(event){
           $.ajax({
-    url: "https://api.morph.io/rjtedge/sold_prices/data.json?key=pZlXoFAWn6C0hgkdEW4j&query=select%20*%20from%20%27data%27%20limit%201",
+    url: "https://api.morph.io/rjtedge/sold_prices/data.json?key=pZlXoFAWn6C0hgkdEW4j&query=select%20*%20from%20%27data%27%20limit%2010",
     dataType: 'jsonp',
     success: function(results){
         console.log(results);
-        $('#info').html('<p>test'+results[0].address+'</p>');
+        $('#info').html('<p>Address: '+results[0].address+'</p>');
+        $('#info').append('<p>Price: '+results[0].price+'</p>');
     }
           });
     });
