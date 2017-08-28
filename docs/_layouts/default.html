@@ -19,7 +19,7 @@
     dataType: 'jsonp',
     success: function(results){
         console.log(results);
-        $('#info').html('<p>test'+results+'</p>');
+        $('#info').html('<p>test'+results[0].address+'</p>');
     }
           });
     });
