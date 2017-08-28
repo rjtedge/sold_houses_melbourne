@@ -12,11 +12,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   
   <script type="text/javascript" language="javascript"> 
-  
-   $(document).ready(function() {
+    $(document).ready(function() {
       $("#button").click(function(event){
-        $('#info').html('<p>test</p>');
+          $.ajax({
+    url: "https://api.morph.io/rjtedge/sold_prices/data.json?key=pZlXoFAWn6C0hgkdEW4j&query=select%20*%20from%20%27data%27%20limit%201",
+    dataType: 'jsonp',
+    success: function(results){
+        console.log(results);
+        $('#info').html('<p>test'+results+'</p>');
+    };
           });
+    });
       });
    </script>
 
