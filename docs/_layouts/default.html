@@ -19,8 +19,8 @@
     dataType: 'jsonp',
     success: function(results){
         console.log(results);
-        $('#info').html('<p>Address: '+results[0].address+'</p>');
-        $('#info').append('<p>Price: '+results[0].price+'</p>');
+        $('#info').html('<p>Address: '+results[1].address+'</p>');
+        $('#info').append('<p>Price: '+results[1].price+'</p>');
     }
           });
     });
