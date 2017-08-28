@@ -14,7 +14,7 @@
   <script type="text/javascript" language="javascript"> 
   
    $(document).ready(function() {
-      $("button").click(function(event){
+      $("#button").click(function(event){
           $.getJSON("https://api.morph.io/rjtedge/sold_prices/data.json?key=pZlXoFAWn6C0hgkdEW4j&query=select%20*%20from%20%27data%27%20limit%2010", function(jd) {
              $("#info").html('<p> Address: ' + jd.[0].address + '</p>');
           });
