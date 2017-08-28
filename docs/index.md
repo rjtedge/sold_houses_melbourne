@@ -1,3 +1,13 @@
 
 
-## Welcome to the Sold Houses Melbourne Page
+
+
+
+
+
+<div>
+          jQuery ajax getJSON method example
+   </div>
+   
+   
+<button>CLICK</button>
